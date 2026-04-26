@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+    	(function() {
+        	const lang = localStorage.getItem('siteLang') || 'lang-en';
+        	document.documentElement.className = lang; // Ustawia klasę na najwyższym poziomie
+    	})();
+	</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Titles | Alexander Bury</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+    <main class="titles-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Alexander Bury</a>
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu" aria-expanded="false">
+                <svg class="icon-burger" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="currentColor"/>
+                </svg>
+                <svg class="icon-close" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#about"><span class="en">About</span><span class="pl">O mnie</span><span class="ru">Обо мне</span></a>
+                <a href="titles.html"><span class="en">Titles</span><span class="pl">Tytuły</span><span class="ru">Титулы</span></a>
+                <a href="career.html"><span class="en">Career</span><span class="pl">Kariera</span><span class="ru">Карьера</span></a>
+                <a href="vip.html"><span class="en">VIP</span><span class="pl">VIP</span><span class="ru">VIP</span></a>
+                <a href="index.html#location"><span class="en">Contact</span><span class="pl">Kontakt</span><span class="ru">Контакты</span></a>
+            </div>
+            <div class="lang-switcher">
+                <div class="lang-desktop">
+                    <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+                    <button class="lang-btn" data-lang="pl" id="btn-pl">PL</button>
+                    <button class="lang-btn" data-lang="ru" id="btn-ru">RU</button>
+                </div>
+                <div class="lang-mobile-dropdown" id="lang-menu">
+                    <button class="lang-trigger" id="lang-trigger">
+                        <span id="current-lang-text">EN</span>
+        			<svg class="icon-down" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"/></svg>
+        			<svg class="icon-up" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6 -6l6 6"/></svg>
+                    </button>
+                    <div class="lang-options">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="pl">Polski</div>
+                        <div class="lang-option" data-lang="ru">Русский</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding minimal-page mt-4">
+        <div class="container">
+            
+            <div class="sort-container">
+    <div class="custom-sort-wrapper">
+        <button class="sort-button" id="custom-sort-btn">
+            <span class="en">Sort by</span>
+            <span class="pl">Sortuj wg</span>
+            
+            <svg id="icon-outline" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-horizontal">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 6l8 0" /><path d="M16 6l4 0" /><path d="M6 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 12l2 0" /><path d="M10 12l10 0" /><path d="M15 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 18l11 0" /><path d="M19 18l1 0" />
+            </svg>
+
+            <svg id="icon-filled" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-adjustments-horizontal">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 15c1.306 0 2.418 .835 2.83 2h.17a1 1 0 0 1 0 2h-.171a3.001 3.001 0 0 1 -5.658 0h-10.171a1 1 0 0 1 0 -2h10.173c.41 -1.165 1.52 -2 2.827 -2m-9 -6c1.306 0 2.418 .835 2.83 2h9.17a1 1 0 0 1 0 2h-9.171a3.001 3.001 0 0 1 -5.658 0h-1.171a1 1 0 0 1 0 -2h1.173c.41 -1.165 1.52 -2 2.827 -2m6 -6c1.306 0 2.418 .835 2.83 2h3.17a1 1 0 0 1 0 2h-3.171a3.001 3.001 0 0 1 -5.658 0h-7.171a1 1 0 1 1 0 -2h7.173c.41 -1.165 1.52 -2 2.827 -2" />
+            </svg>
+        </button>
+
+        <div class="sort-dropdown" id="custom-sort-dropdown">
+            <ul class="sort-list">
+                <li class="sort-option" data-value="newest">
+                    <span class="en">Newest First</span>
+                    <span class="pl">Od najnowszych</span>
+                    <span class="checkmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg>
+                    </span>
+                </li>
+                <li class="sort-option" data-value="oldest">
+                    <span class="en">Oldest First</span>
+                    <span class="pl">Od najstarszych</span>
+                    <span class="checkmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            <div class="ow-grid" id="achievements-grid">
+
+                <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Swiss Open Gstaad ATP 250</span>
+                            <span class="pl">Swiss Open Gstaad ATP 250</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Denis Istomin</span>
+                            <span class="pl">Zwycięstwo z Denisem Istominem</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Gstaad, Switzerland</span>
+                            <span class="pl">Gstaad, Szwajcaria</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Astana Challenger</span>
+                            <span class="pl">Astana Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Sergey Betov</span>
+                            <span class="pl">Zwycięstwo z Sergey Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Astana, Kazakhstan</span>
+                            <span class="pl">Astana, Kazahstan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Samarkand Challenger</span>
+                            <span class="pl">Samarkand Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Sergey Betov</span>
+                            <span class="pl">Zwycięstwo z Sergey Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Samarkand, Uzbekistan</span>
+                            <span class="pl">Samarkand, Uzbekistan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Fergana Challenger</span>
+                            <span class="pl">Fergana Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Sergey Betov</span>
+                            <span class="pl">Zwycięstwo z Sergey Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Fergana, Uzbekistan</span>
+                            <span class="pl">Fergana, Uzbekistan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Tilia Slovenia Open</span>
+                            <span class="pl">Tilia Slovenia Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Sergey Betov</span>
+                            <span class="pl">Zwycięstwo z Sergey Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Slovenia</span>
+                            <span class="pl">Słowenia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Sparkassen ATP Challenger</span>
+                            <span class="pl">Sparkassen ATP Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Sergey Betov</span>
+                            <span class="pl">Zwycięstwo z Sergey Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Verona, Italy</span>
+                            <span class="pl">Verona, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Tennis Napoli Cup</span>
+                            <span class="pl">Tennis Napoli Cup</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Nikoloz Basilashvili</span>
+                            <span class="pl">Drugie miejsce z Nikoloz Basilashvili</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Naples, Italy</span>
+                            <span class="pl">Naples, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Open Castilla y León</span>
+                            <span class="pl">Open Castilla y León</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andreas Siljeström</span>
+                            <span class="pl">Drugie miejsce z Andreas Siljeström</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Spain</span>
+                            <span class="pl">Hiszpania</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Tilia Slovenia Open</span>
+                            <span class="pl">Tilia Slovenia Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andreas Siljeström</span>
+                            <span class="pl">Drugie miejsce z Andreas Siljeström</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Slovenia</span>
+                            <span class="pl">Słowenia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Internationaux de Vendée</span>
+                            <span class="pl">Internationaux de Vendée</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andreas Siljeström</span>
+                            <span class="pl">Drugie miejsce z Andreas Siljeström</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">France</span>
+                            <span class="pl">Francja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kazan Kremlin Cup</span>
+                            <span class="pl">Kazan Kremlin Cup</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Igor Zelenay</span>
+                            <span class="pl">Zwycięstwo z Igor Zelenay</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazan, Russia</span>
+                            <span class="pl">Kazan, Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">UniCredit Czech Open</span>
+                            <span class="pl">UniCredit Czech Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Igor Zelenay</span>
+                            <span class="pl">Zwycięstwo z Igor Zelenay</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Internazionali Friuli</span>
+                            <span class="pl">Internazionali Friuli</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Andre Begemann</span>
+                            <span class="pl">Zwycięstwo z Andre Begemann</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Udine, Italy</span>
+                            <span class="pl">Udine, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">AON Open Challenger</span>
+                            <span class="pl">AON Open Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andrei Vasilevski</span>
+                            <span class="pl">Drugie miejsce z Andrei Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Genoa, Italy</span>
+                            <span class="pl">Genoa, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Pekao Szczecin Open</span>
+                            <span class="pl">Pekao Szczecin Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Andre Begemann</span>
+                            <span class="pl">Zwycięstwo z Andre Begemann</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Szczecin, Poland</span>
+                            <span class="pl">Szczecin, Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">WHB Hungarian Open</span>
+                            <span class="pl">WHB Hungarian Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Andreas Siljeström</span>
+                            <span class="pl">Zwycięstwo z Andreas Siljeström</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Budapest, Hungary</span>
+                            <span class="pl">Budapest, Węgry</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2017">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2017</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">International Challenger Quanzhou</span>
+                            <span class="pl">International Challenger Quanzhou</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andre Begemann</span>
+                            <span class="pl">Drugie miejsce z Andre Begemann</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Quanzhou, China</span>
+                            <span class="pl">Quanzhou, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2017">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2017</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Città di Como Challenger</span>
+                            <span class="pl">Città di Como Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Kevin Krawietz</span>
+                            <span class="pl">Drugie miejsce z Kevin Krawietz</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Como, Italy</span>
+                            <span class="pl">Como, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2017">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2017</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Pekao Szczecin Open</span>
+                            <span class="pl">Pekao Szczecin Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Andreas Siljeström</span>
+                            <span class="pl">Drugie miejsce z Andreas Siljeström</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Szczecin, Poland</span>
+                            <span class="pl">Szczecin, Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2018">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2018</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Zhuhai Open</span>
+                            <span class="pl">Zhuhai Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Peng Hsien-yin</span>
+                            <span class="pl">Drugie miejsce z Peng Hsien-yin</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Zhuhai, China</span>
+                            <span class="pl">Zhuhai, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2018">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2018</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Qujing International Challenger</span>
+                            <span class="pl">Qujing International Challenger</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Peng Hsien-yin</span>
+                            <span class="pl">Zwycięstwo z Peng Hsien-yin</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Qujing, China</span>
+                            <span class="pl">Qujing, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2018">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2018</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kunming Open</span>
+                            <span class="pl">Kunming Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with Lloyd Harris</span>
+                            <span class="pl">Zwycięstwo z Lloyd Harris</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kunming, China</span>
+                            <span class="pl">Kunming, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2010">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2010</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F3 Futures</span>
+                            <span class="pl">Belarus F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up</span>
+                            <span class="pl">Drugie miejsce</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Uzbekistan F1 Futures</span>
+                            <span class="pl">Uzbekistan F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win</span>
+                            <span class="pl">Zwycięstwo</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Uzbekistan</span>
+                            <span class="pl">Uzbekistan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2006">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2006</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F2 Futures</span>
+                            <span class="pl">Belarus F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with K. Harbatsiuk</span>
+                            <span class="pl">Drugie miejsce z K. Harbatsiuk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2006">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2006</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Egypt 2 Satellites</span>
+                            <span class="pl">Egypt 2 Satellites</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with K. Harbatsiuk</span>
+                            <span class="pl">Drugie miejsce z K. Harbatsiuk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Egypt</span>
+                            <span class="pl">Egipt</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2007">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2007</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Bulgaria F7 Futures</span>
+                            <span class="pl">Bulgaria F7 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with Y. Shirshov</span>
+                            <span class="pl">Drugie miejsce z Y. Shirshov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Bulgaria</span>
+                            <span class="pl">Bułgaria</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2008">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2008</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Ukraine F1 Futures</span>
+                            <span class="pl">Ukraine F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with V. Voltchkov</span>
+                            <span class="pl">Zwycięstwo z V. Voltchkov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Ukraine</span>
+                            <span class="pl">Ukraina</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2008">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2008</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F6 Futures</span>
+                            <span class="pl">Russia F6 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with E. Gasparyan</span>
+                            <span class="pl">Drugie miejsce z E. Gasparyan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2009">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2009</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F2 Futures</span>
+                            <span class="pl">Belarus F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with A. Vasilevski</span>
+                            <span class="pl">Drugie miejsce z A. Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                 <div class="ow-card-wrapper" data-year="2010">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2010</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Israel F3 Futures</span>
+                            <span class="pl">Israel F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with P. Katliarov</span>
+                            <span class="pl">Drugie miejsce z P. Katliarov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Israel</span>
+                            <span class="pl">Izrael</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2010">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2010</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Penza Cup</span>
+                            <span class="pl">Penza Cup</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with K. Harbatsiuk</span>
+                            <span class="pl">Drugie miejsce z K. Harbatsiuk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Penza, Russia</span>
+                            <span class="pl">Penza, Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="ow-card-wrapper" data-year="2010">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2010</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F1 Futures</span>
+                            <span class="pl">Belarus F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with K. Harbatsiuk</span>
+                            <span class="pl">Drugie miejsce z K. Harbatsiuk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2010">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2010</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F3 Futures</span>
+                            <span class="pl">Belarus F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with N. Fidirko</span>
+                            <span class="pl">Drugie miejsce z N. Fidirko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Turkey F14 Futures</span>
+                            <span class="pl">Turkey F14 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with V. Klymenko</span>
+                            <span class="pl">Drugie miejsce z V. Klymenko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Turkey</span>
+                            <span class="pl">Turcja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Czech Republic F1 Futures</span>
+                            <span class="pl">Czech Republic F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with N. Fidirko</span>
+                            <span class="pl">Zwycięstwo z N. Fidirko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Poland F3 Futures</span>
+                            <span class="pl">Poland F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with N. Fidirko</span>
+                            <span class="pl">Zwycięstwo z N. Fidirko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Poland</span>
+                            <span class="pl">Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Germany F7 Futures</span>
+                            <span class="pl">Germany F7 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with S. Betov</span>
+                            <span class="pl">Drugie miejsce z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Germany</span>
+                            <span class="pl">Niemcy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Estonia F1 Futures</span>
+                            <span class="pl">Estonia F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with A. Vasilevski</span>
+                            <span class="pl">Zwycięstwo z A. Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Estonia</span>
+                            <span class="pl">Estonia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Poland F8 Futures</span>
+                            <span class="pl">Poland F8 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with A. Vasilevski</span>
+                            <span class="pl">Drugie miejsce z A. Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Poland</span>
+                            <span class="pl">Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">ATP Challenger Trophy</span>
+                            <span class="pl">ATP Challenger Trophy</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with A. Vasilevski</span>
+                            <span class="pl">Drugie miejsce z A. Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Slovakia</span>
+                            <span class="pl">Słowacja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Sicilia Classic</span>
+                            <span class="pl">Sicilia Classic</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with A. Vasilevski</span>
+                            <span class="pl">Drugie miejsce z A. Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Sicily, Italy</span>
+                            <span class="pl">Sicily, Włochy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Czech Republic F4 Futures</span>
+                            <span class="pl">Czech Republic F4 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with S. Betov</span>
+                            <span class="pl">Drugie miejsce z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Carpet</span>
+                            <span class="pl">Dywan</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Czech Republic F5 Futures</span>
+                            <span class="pl">Czech Republic F5 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Carpet</span>
+                            <span class="pl">Dywan</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F2 Futures</span>
+                            <span class="pl">Russia F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kazan Kremlin Cup</span>
+                            <span class="pl">Kazan Kremlin Cup</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with M. Kowalczyk</span>
+                            <span class="pl">Drugie miejsce z M. Kowalczyk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazan, Russia</span>
+                            <span class="pl">Kazan, Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Poland F1 Futures</span>
+                            <span class="pl">Poland F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with D. Pavlovs</span>
+                            <span class="pl">Drugie miejsce z D. Pavlovs</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Poland</span>
+                            <span class="pl">Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Czech Republic F7 Futures</span>
+                            <span class="pl">Czech Republic F7 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with N. Fidirko</span>
+                            <span class="pl">Drugie miejsce z N. Fidirko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Carpet</span>
+                            <span class="pl">Dywan</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Czech Republic F8 Futures</span>
+                            <span class="pl">Czech Republic F8 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with A. Kapaś</span>
+                            <span class="pl">Drugie miejsce z A. Kapaś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Czech Republic</span>
+                            <span class="pl">Republika Czech</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Carpet</span>
+                            <span class="pl">Dywan</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F1 Futures</span>
+                            <span class="pl">Russia F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with N. Fidirko</span>
+                            <span class="pl">Drugie miejsce z N. Fidirko</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F3 Futures</span>
+                            <span class="pl">Russia F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with M. Fufygin</span>
+                            <span class="pl">Zwycięstwo z M. Fufygin</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Uzbekistan F2 Futures</span>
+                            <span class="pl">Uzbekistan F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with M. Fufygin</span>
+                            <span class="pl">Drugie miejsce z M. Fufygin</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Uzbekistan</span>
+                            <span class="pl">Uzbekistan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F8 Futures</span>
+                            <span class="pl">Russia F8 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with V. Uzhylovskyi</span>
+                            <span class="pl">Zwycięstwo z V. Uzhylovskyi</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Poland F2 Futures</span>
+                            <span class="pl">Poland F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with V. Kruk</span>
+                            <span class="pl">Drugie miejsce z V. Kruk</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Poland</span>
+                            <span class="pl">Polska</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Russia F12 Futures</span>
+                            <span class="pl">Russia F12 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Russia</span>
+                            <span class="pl">Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kazakhstan F7 Futures</span>
+                            <span class="pl">Kazakhstan F7 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazakhstan</span>
+                            <span class="pl">Kazachstan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kazakhstan F8 Futures</span>
+                            <span class="pl">Kazakhstan F8 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazakhstan</span>
+                            <span class="pl">Kazachstan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Siberia Cup</span>
+                            <span class="pl">Siberia Cup</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Novosibirsk, Russia</span>
+                            <span class="pl">Novosibirsk, Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Germany F3 Futures</span>
+                            <span class="pl">Germany F3 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with N. Basilashvili</span>
+                            <span class="pl">Zwycięstwo z N. Basilashvili</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Germany</span>
+                            <span class="pl">Niemcy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Carpet</span>
+                            <span class="pl">Dywan</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F1 Futures</span>
+                            <span class="pl">Belarus F1 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F2 Futures</span>
+                            <span class="pl">Belarus F2 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2014">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2014</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Belarus F4 Futures</span>
+                            <span class="pl">Belarus F4 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Win with S. Betov</span>
+                            <span class="pl">Zwycięstwo z S. Betov</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Belarus</span>
+                            <span class="pl">Białoruś</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2018">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2018</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Kazakhstan F8 Futures</span>
+                            <span class="pl">Kazakhstan F8 Futures</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Runner-up with M. Zubkou</span>
+                            <span class="pl">Drugie miejsce z M. Zubkou</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazakhstan</span>
+                            <span class="pl">Kazachstan</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Summer Universiade</span>
+                            <span class="pl">Letnia Uniwersjada</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Silver Medal (Doubles) with Siarhei Betau</span>
+                            <span class="pl">Srebrny Medal (Debel) z Siarhei Betau</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Shenzhen, China</span>
+                            <span class="pl">Shenzhen, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Summer Universiade</span>
+                            <span class="pl">Letnia Uniwersjada</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Silver Medal (Mixed Doubles) with Sviatlana Pirazhenka</span>
+                            <span class="pl">Srebrny Medal (Debel Mieszany) z Sviatlana Pirazhenka</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Shenzhen, China</span>
+                            <span class="pl">Shenzhen, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Summer Universiade</span>
+                            <span class="pl">Letnia Uniwersjada</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Silver Medal (Team) with Siarhei Betau</span>
+                            <span class="pl">Srebrny Medal (Drużynowe) z Siarhei Betau</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Shenzhen, China</span>
+                            <span class="pl">Shenzhen, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2011">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2011</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Summer Universiade</span>
+                            <span class="pl">Letnia Uniwersjada</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Bronze Medal (Singles)</span>
+                            <span class="pl">Brązowy Medal (Singiel)</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Shenzhen, China</span>
+                            <span class="pl">Shenzhen, Chiny</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2013">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2013</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Summer Universiade</span>
+                            <span class="pl">Letnia Uniwersjada</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Silver Medal (Doubles) with Andrei Vasilevski</span>
+                            <span class="pl">Srebrny Medal (Debel) z Andrei Vasilevski</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Kazan, Russia</span>
+                            <span class="pl">Kazan, Rosja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2012">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2012</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Olympic Games</span>
+                            <span class="pl">Igrzyska Olimpijskie</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Doubles tournament participant</span>
+                            <span class="pl">Uczestnik rozgrywek deblowych</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">London, United Kingdom</span>
+                            <span class="pl">London, Wielka Brytania</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Olympic Games</span>
+                            <span class="pl">Igrzyska Olimpijskie</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">17th place in doubles with Max Mirnyi</span>
+                            <span class="pl">17 miejsce w deblu z Max Mirnyi</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Rio de Janeiro, Brazil</span>
+                            <span class="pl">Rio de Janeiro, Brazylia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Wimbledon</span>
+                            <span class="pl">Wimbledon</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Round of 32 in doubles</span>
+                            <span class="pl">Druga runda w deblu</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">London, United Kingdom</span>
+                            <span class="pl">London, Wielka Brytania</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Grass</span>
+                            <span class="pl">Trawa</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2015">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2015</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">US Open</span>
+                            <span class="pl">US Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Round of 32 in doubles</span>
+                            <span class="pl">Druga runda w deblu</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">New York, United States</span>
+                            <span class="pl">New York, Stany Zjednoczone</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Australian Open</span>
+                            <span class="pl">Australian Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Main draw in doubles</span>
+                            <span class="pl">Pierwsza runda w deblu</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Melbourne, Australia</span>
+                            <span class="pl">Melbourne, Australia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2016">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2016</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">French Open</span>
+                            <span class="pl">French Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Main draw in doubles</span>
+                            <span class="pl">Pierwsza runda w deblu</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Paris, France</span>
+                            <span class="pl">Paris, Francja</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Clay</span>
+                            <span class="pl">Ceglana</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="2017">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2017</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">Australian Open</span>
+                            <span class="pl">Australian Open</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Main draw in doubles</span>
+                            <span class="pl">Pierwsza runda w deblu</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Location:</span>
+                                <span class="pl">Lokalizacja:</span>
+                            </strong> 
+                            <span class="en">Melbourne, Australia</span>
+                            <span class="pl">Melbourne, Australia</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Surface:</span>
+                                <span class="pl">Nawierzchnia:</span>
+                            </strong> 
+                            <span class="en">Hard</span>
+                            <span class="pl">Twarda</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="ow-card-wrapper" data-year="2005">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">2005–2018</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">DAVIS CUP (Belarus National Team)</span>
+                            <span class="pl">DAVIS CUP (Reprezentacja Białorusi)</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Singles & Doubles</span>
+                            <span class="pl">Singles & Doubles</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Singles | Doubles (wins - losses):</span>
+                                <span class="pl">Single | Deble (wygrane - przegrane):</span>
+                            </strong> 
+                            <span class="en">2–1 | 6–4 | 11+ ties played</span>
+                            <span class="pl">2–1 | 6–4 | 11+ remisów</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Debut:</span>
+                                <span class="pl">Debiut:</span>
+                            </strong> 
+                            <span class="en">2005 vs Canada (age 17)</span>
+                            <span class="pl">2005 vs Kanada (17 lat)</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ow-card-wrapper" data-year="1997">
+                    <div class="ow-image-box">
+                        <img src="placeholder-trophy.webp" alt="Trophy">
+                        <div class="ow-date-badge">1997</div>
+                    </div>
+                    <div class="ow-text-details">
+                        <h3>
+                            <span class="en">NATIONAL BELARUSIAN CHAMPIONSHIPS</span>
+                            <span class="pl">NARODOWE MISTRZOSTWA BIAŁORUSI</span>
+                        </h3>
+                        <div class="ow-result-text">
+                            <span class="en">Absolute National Champion</span>
+                            <span class="pl">Absolutny Mistrz Narodowy</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en">Singles & Doubles:</span>
+                                <span class="pl">Single & Deble:</span>
+                            </strong> 
+                            <span class="en">15+ titles</span>
+                            <span class="pl">15+ tytułów</span>
+                        </div>
+                        <div class="ow-extra-info">
+                            <strong>
+                                <span class="en"></span>
+                                <span class="pl"></span>
+                            </strong> 
+                            <span class="en"></span>
+                            <span class="pl"></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    </main>
+        
+    <footer>
+        <div class="container text-center">
+            <p>© 2026 Alexander Bury. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+        
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sortBtn = document.getElementById('custom-sort-btn');
+    const sortDropdown = document.getElementById('custom-sort-dropdown');
+    const sortOptions = document.querySelectorAll('.sort-option');
+    const grid = document.querySelector('.ow-grid');
+    const iconOutline = document.getElementById('icon-outline');
+    const iconFilled = document.getElementById('icon-filled');
+
+    const defaultOrder = Array.from(grid.querySelectorAll('.ow-card-wrapper'));
+
+    function updateIcons(isOpen) {
+        if (iconOutline && iconFilled) {
+            iconOutline.style.display = isOpen ? 'none' : 'block';
+            iconFilled.style.display = isOpen ? 'block' : 'none';
+        }
+    }
+
+    // 1. Kliknięcie w przycisk: Toggle menu
+    sortBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Zapobiega natychmiastowemu zamknięciu przez listener na 'document'
+        const isOpen = sortDropdown.classList.toggle('active');
+        updateIcons(isOpen);
+    });
+
+    // 2. Kliknięcie gdziekolwiek na stronie: Zamykanie
+    document.addEventListener('click', function(e) {
+        // Jeśli menu jest otwarte i kliknięcie nastąpiło POZA przyciskiem i POZA menu
+        if (sortDropdown.classList.contains('active')) {
+            if (!sortDropdown.contains(e.target) && !sortBtn.contains(e.target)) {
+                sortDropdown.classList.remove('active');
+                updateIcons(false);
+            }
+        }
+    });
+
+    // 3. Wybór opcji: Sortowanie (bez zamykania menu)
+    sortOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.stopPropagation(); // Ważne, żeby kliknięcie wewnątrz menu nie było traktowane jako kliknięcie "na zewnątrz"
+
+            const isAlreadySelected = this.classList.contains('selected');
+
+            // Czyścimy zaznaczenia
+            sortOptions.forEach(opt => opt.classList.remove('selected'));
+
+            if (isAlreadySelected) {
+                // Odznaczanie -> powrót do oryginału
+                defaultOrder.forEach(card => grid.appendChild(card));
+            } else {
+                // Zaznaczanie -> sortowanie
+                this.classList.add('selected');
+                const order = this.getAttribute('data-value');
+                const cards = Array.from(grid.querySelectorAll('.ow-card-wrapper'));
+
+                cards.sort((a, b) => {
+                    const yearA = parseInt(a.getAttribute('data-year')) || 0;
+                    const yearB = parseInt(b.getAttribute('data-year')) || 0;
+                    return order === 'newest' ? yearB - yearA : yearA - yearB;
+                });
+                cards.forEach(card => grid.appendChild(card));
+            }
+            // Menu pozostaje otwarte zgodnie z prośbą
+        });
+    });
+});
+    </script>
+</body>
+</html>

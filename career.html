@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+    	(function() {
+        	const lang = localStorage.getItem('siteLang') || 'lang-en';
+        	document.documentElement.className = lang;
+    	})();
+	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Story | Alexander Bury</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Alexander Bury</a>
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu" aria-expanded="false">
+                <svg class="icon-burger" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="currentColor"/>
+                </svg>
+                <svg class="icon-close" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#about"><span class="en">About</span><span class="pl">O mnie</span><span class="ru">Обо мне</span></a>
+                <a href="titles.html"><span class="en">Titles</span><span class="pl">Tytuły</span><span class="ru">Титулы</span></a>
+                <a href="career.html"><span class="en">Career</span><span class="pl">Kariera</span><span class="ru">Карьера</span></a>
+                <a href="vip.html"><span class="en">VIP</span><span class="pl">VIP</span><span class="ru">VIP</span></a>
+                <a href="index.html#location"><span class="en">Contact</span><span class="pl">Kontakt</span><span class="ru">Контакты</span></a>
+            </div>
+            <div class="lang-switcher">
+                <div class="lang-desktop">
+                    <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+                    <button class="lang-btn" data-lang="pl" id="btn-pl">PL</button>
+                    <button class="lang-btn" data-lang="ru" id="btn-ru">RU</button>
+                </div>
+                <div class="lang-mobile-dropdown" id="lang-menu">
+                    <button class="lang-trigger" id="lang-trigger">
+                        <span id="current-lang-text">EN</span>
+        			<svg class="icon-down" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"/></svg>
+        			<svg class="icon-up" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6 -6l6 6"/></svg>
+                    </button>
+                    <div class="lang-options">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="pl">Polski</div>
+                        <div class="lang-option" data-lang="ru">Русский</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding minimal-page mt-4">
+        <div class="container">
+            <div class="minimal-header border-bottom">
+                <h1 class="anim-fade-in">
+                    <span class="en">Career Story</span>
+                    <span class="pl">Historia Kariery</span>
+                    <span class="ru">Профессиональный путь</span>
+                </h1>
+                <p class="minimal-subtitle anim-fade-in">
+                    <span class="en">The journey from junior circuits to the world tour.</span>
+                    <span class="pl">Droga od turniejów juniorskich do turniejów światowych.</span>
+                    <span class="ru">Путь от юниорских турниров к мировому туру.</span>
+                </p>
+            </div>
+
+            <div class="premium-vertical-timeline">
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2018</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">The Final Season</span>
+                            <span class="pl">Ostatni sezon</span>
+                            <span class="ru">Последний сезон</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">In his 13th and final professional season, Alexander went out on a high note, winning two ATP Challenger titles in China. He retired as one of Belarus's most decorated players, including over 10 national championship titles.</span>
+                            <span class="pl">W swoim trzynastym i ostatnim profesjonalnym sezonie Alexander pożegnał się z kortami w wielkim stylu, wygrywając dwa tytuły ATP Challenger w Chinach. Przeszedł na emeryturę jako jeden z najbardziej utytułowanych zawodników na Białorusi, mając na koncie ponad 10 tytułów mistrza kraju.</span>
+                            <span class="ru">В своём 13-м и последнем профессиональном сезоне Александр завершил карьеру на высокой ноте, выиграв два титула ATP Challenger в Китае. Он завершил карьеру как один из самых титулованных игроков Беларуси, включая более 10 побед на национальных чемпионатах.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2017</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Elite Competition</span>
+                            <span class="pl">Elitarna rywalizacja</span>
+                            <span class="ru">Элитная конкуренция</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">Alexander remained at the top of the game, competing in the doubles main draw of the Australian Open. He also reached three Challenger finals in China, Italy, and Poland, proving his skill on all surfaces.</span>
+                            <span class="pl">Alexander utrzymał się w światowej czołówce, rywalizując w drabince głównej debla Australian Open. Dotarł także do trzech finałów Challengerów w Chinach, we Włoszech i w Polsce, udowadniający swoje umiejętności na każdej nawierzchni.</span>
+                            <span class="ru">Александр продолжал выступать на высшем уровне, участвуя в основной сетке парного разряда Australian Open. Он также дошёл до трёх финалов турниров Challenger в Китае, Италии и Польше, подтверждая свой уровень на всех покрытиях.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2016</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Rio Olympics & Challenger Dominance</span>
+                            <span class="pl">Igrzyska w Rio i dominacja w Challengerach</span>
+                            <span class="ru">Олимпиада в Рио и доминирование на Challenger</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">Alexander made his second Olympic appearance at the Rio 2016 Games. He continued his professional excellence by winning 5 ATP Challenger titles across Russia, Italy, Poland, and the Czech Republic, while competing at the Australian and French Opens.</span>
+                            <span class="pl">Alexander po raz drugi wystąpił na Igrzyskach Olimpijskich, tym razem w Rio w 2016 roku. Kontynuował profesjonalną passę, wygrywając 5 tytułów ATP Challenger w Rosji, Włoszech, Polsce i Czechach, jednocześnie rywalizując w Australian Open i Roland Garros.</span>
+                            <span class="ru">Александр принял участие во второй Олимпиаде — Играх 2016 года в Рио. Он продолжил демонстрировать высокий уровень, выиграв 5 титулов ATP Challenger в России, Италии, Польше и Чехии, а также выступая на Australian Open и Roland Garros.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2015</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">ATP World Tour Tournament Champion</span>
+                            <span class="pl">Zwycięzca Turnieju ATP World Tour</span>
+                            <span class="ru">Победитель турнира ATP World Tour</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">The pinnacle of his career. Alexander won the ATP 250 Swiss Open Gstaad, defeating world-class opponents to claim his biggest title. This victory, combined with appearances at Wimbledon and the US Open, propelled him to a career-high doubles ranking of #59.</span>
+                            <span class="pl">Szczytowy punkt kariery. Alexander wygrał turniej ATP 250 Swiss Open Gstaad, pokonując światowej klasy przeciwników i zdobywając swój najważniejszy tytuł. To zwycięstwo, w połączeniu z występami na Wimbledonie i US Open, wywindowało go na najwyższe w karierze, 59. miejsce w rankingu deblowym.</span>
+                            <span class="ru">Вершина его карьеры. Александр выиграл турнир ATP 250 Swiss Open в Гштааде, обыграв соперников мирового уровня и завоевав свой самый значимый титул. Эта победа, вместе с участием на Уимблдоне и US Open, позволила ему подняться до наивысшего в карьере рейтинга в парном разряде — №59.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2014</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">The Ranking Breakthrough</span>
+                            <span class="pl">Przełom w rankingu</span>
+                            <span class="ru">Прорыв в рейтинге</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">2014 was a year of incredible consistency, with Alexander reaching a career-high singles ranking of #366. He established himself as a dominant doubles force, winning a staggering 9 titles in one season, including his first ATP Challenger title in Astana.</span>
+                            <span class="pl">Rok 2014 był czasem niesamowitej powtarzalności, w którym Alexander osiągnął najwyższy w karierze ranking singlowy – nr 366. Ugruntował swoją pozycję jako dominująca siła w deblu, wygrywając rekordowe 9 tytułów w jednym sezonie, w tym swój pierwszy tytuł ATP Challenger w Astanie.</span>
+                            <span class="ru">2014 год стал годом невероятной стабильности — Александр достиг наивысшего в карьере рейтинга в одиночном разряде №366. Он утвердился как доминирующий игрок в парном разряде, завоевав впечатляющие 9 титулов за один сезон, включая свой первый титул ATP Challenger в Астане.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2013</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Singles Success & Challenger Glory</span>
+                            <span class="pl">Sukces w singlu i chwała w Challengerach</span>
+                            <span class="ru">Успехи в одиночном разряде и триумф на турнирах Challenger</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">Alexander captured his professional singles title at the Uzbekistan F1 Futures. It was also a massive year for doubles, winning five ITF titles and claiming the Siberia Cup Challenger in Russia.</span>
+                            <span class="pl">Alexander zdobył swój profesjonalny tytuł singlowy w turnieju Uzbekistan F1 Futures. Był to również przełomowy rok w deblu – wygrał pięć tytułów ITF oraz triumfował w Challengerze Siberia Cup w Rosji.</span>
+                            <span class="ru">Александр завоевал свой профессиональный титул в одиночном разряде на турнире Uzbekistan F1 Futures. Это также был выдающийся год в парном разряде — он выиграл пять титулов ITF и стал победителем турнира серии Challenger Siberia Cup в России.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2012</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Olympic Debut</span>
+                            <span class="pl">Olimpijski debiut</span>
+                            <span class="ru">Олимпийский дебют</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">One of the proudest moments of his career, Alexander represented Belarus at the 2012 London Olympic Games. Alongside his Olympic journey, he continued to win titles, including the Russia F2 Futures and reaching the Challenger final in Kazan.</span>
+                            <span class="pl">Jeden z najdumniejszych momentów w jego karierze – Alexander reprezentował Białoruś na Igrzyskach Olimpijskich w Londynie w 2012 roku. Równolegle z olimpijską podróżą kontynuował zdobywanie tytułów, w tym w Russia F2 Futures, oraz dotarł do finału Challengera w Kazaniu.</span>
+                            <span class="ru">Один из самых гордых моментов его карьеры — участие в Олимпийских играх 2012 года в Лондоне, где Александр представлял Беларусь. Параллельно он продолжал выигрывать титулы, включая турнир Russia F2 Futures, а также дошёл до финала турнира серии Challenger в Казани.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2011</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">The Universiade Hero</span>
+                            <span class="pl">Bohater Uniwersjady</span>
+                            <span class="ru">Герой Универсиады</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">A historic year for Alexander as he secured four medals at the Universiade Games in Shenzhen, China, including three Silvers and a Bronze. Additionally, he dominated the ITF circuit, winning four doubles titles across the Czech Republic, Poland, and Estonia.</span>
+                            <span class="pl">Historyczny rok dla Alexandera, w którym zdobył cztery medale na Uniwersjadzie w Shenzhen w Chinach, w tym trzy srebrne i jeden brązowy. Dodatkowo zdominował cykl ITF, zdobywając cztery tytuły deblowe w Czechach, Polsce i Estonii.</span>
+                            <span class="ru">Исторический год для Александра — он завоевал четыре медали на Всемирной Универсиаде в Шэньчжэне (Китай), включая три серебряные и одну бронзовую. Кроме того, он доминировал на турнирах ITF, выиграв четыре титула в парном разряде в Чехии, Польше и Эстонии.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2010</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Facing Future Stars</span>
+                            <span class="pl">W starciu z przyszłymi gwiazdami</span>
+                            <span class="ru">Против будущих звёзд</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">This year showcased Alexander's singles prowess when he reached the final of the Belarus F3 Futures, falling only to future ATP top-20 player Jerzy Janowicz. He also reached multiple doubles finals across Russia and Israel.</span>
+                            <span class="pl">Ten rok pokazał umiejętności singlowe Alexandera, gdy dotarł do finału turnieju Belarus F3 Futures, ulegając jedynie przyszłemu zawodnikowi top 20 ATP, Jerzemu Janowiczowi. Dotarł także do wielu finałów deblowych w Rosji i Izraelu.</span>
+                            <span class="ru">Этот год продемонстрировал силу Александра в одиночной игре — он дошёл до финала турнира Belarus F3 Futures, уступив лишь будущему игроку топ-20 ATP Ежи Яновичу. Также он выходил в несколько финалов в парном разряде на турнирах в России и Израиле.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2009</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">National Pride</span>
+                            <span class="pl">Duma narodowa</span>
+                            <span class="ru">Национальная гордость</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">Continuing his steady rise, Alexander remained a key representative for the national team in the Davis Cup. He also reached another doubles final on home soil at the Belarus F2 Futures.</span>
+                            <span class="pl">Kontynuując stabilny wzrost, Alexander pozostał kluczowym reprezentantem drużyny narodowej w Pucharze Davisa. Dotarł także do kolejnego finału debla na własnym terenie podczas turnieju Belarus F2 Futures.</span>
+                            <span class="ru">Продолжая уверенное развитие, Александр оставался ключевым игроком национальной сборной в Кубке Дэвиса. Он также дошёл до ещё одного финала в парном разряде на домашнем турнире Belarus F2 Futures.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2008</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">The First Trophy</span>
+                            <span class="pl">Pierwsze trofeum</span>
+                            <span class="ru">Первый титул</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">2008 brought a major milestone: Alexander's first career doubles title at the Ukraine F1 Futures. Winning alongside Vladimir Voltchkov, this victory proved he could compete and win at the professional level.</span>
+                            <span class="pl">Rok 2008 przyniósł ważny kamień milowy: pierwszy w karierze tytuł deblowy Alexandera w turnieju Ukraine F1 Futures. Wygrana u boku Vladimira Voltchkova potwierdziła, że potrafi on rywalizować i zwyciężać na poziomie profesjonalnym.</span>
+                            <span class="ru">2008 год стал важной вехой: Александр завоевал свой первый титул в парном разряде на турнире Ukraine F1 Futures. Победа в паре с Владимиром Волчковым доказала, что он способен успешно выступать и побеждать на профессиональном уровне.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2007</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Gaining Momentum</span>
+                            <span class="pl">Budowanie doświadczenia</span>
+                            <span class="ru">Набор формы</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">Throughout 2007, Alexander focused on gaining valuable experience across Europe. He continued to climb the rankings, highlighted by reaching the doubles final at the Bulgaria F7 Futures.</span>
+                            <span class="pl">Przez cały 2007 rok Alexander skupiał się na zdobywaniu cennego doświadczenia w całej Europie. Kontynuował wspinaczkę w rankingach, czego zwieńczeniem był finał debla w turnieju Bulgaria F7 Futures.</span>
+                            <span class="ru">В течение 2007 года Александр сосредоточился на получении ценного опыта на турнирах по всей Европе. Он продолжал подниматься в рейтинге, отметившись выходом в финал парного разряда на турнире Bulgaria F7 Futures.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2006</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">Turning Professional</span>
+                            <span class="pl">Przejście na zawodowstwo</span>
+                            <span class="ru">Переход в профессионалы</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">This was the year Alexander officially joined the professional ranks. He began competing on the ITF Futures circuit, reaching his first doubles finals in Belarus and Egypt, quickly showing his potential as a doubles specialist.</span>
+                            <span class="pl">W tym roku Alexander oficjalnie dołączył do grona profesjonalistów. Zaczął rywalizować w cyklu ITF Futures, docierając do swoich pierwszych finałów deblowych na Białorusi i w Egipcie, szybko wykazując potencjał jako specjalista od gry podwójnej.</span>
+                            <span class="ru">В этом году Александр официально начал профессиональную карьеру. Он начал выступать на турнирах серии ITF Futures, дойдя до своих первых финалов в парном разряде в Беларуси и Египте, быстро продемонстрировав свой потенциал как специалиста по парной игре.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="v-timeline-item">
+                    <div class="v-timeline-content">
+                        <div class="v-timeline-date anim-slide-right">2005</div>
+                        <div class="v-timeline-subtitle anim-slide-right">
+                            <span class="en">The National Call-Up</span>
+                            <span class="pl">Powołanie do kadry narodowej</span>
+                            <span class="ru">Вызов в национальную сборную</span>
+                        </div>
+                        <p class="v-timeline-text anim-fade-in">
+                            <span class="en">At just 17 years old, Alexander Bury made his debut for the Belarus Davis Cup team against Canada. As one of the youngest players ever called up to the squad, this year marked the beginning of a long and proud international career representing his country on the world stage.</span>
+                            <span class="pl">W wieku zaledwie 17 lat Alexander Bury zadebiutował w reprezentacji Białorusi w Pucharze Davisa w meczu przeciwko Kanadzie. Jako jeden z najmłodszych zawodników w historii powołanych do kadry, rok ten rozpoczął jego długą i dumną karierę reprezentowania kraju na arenie międzynarodowej.</span>
+                            <span class="ru">В возрасте всего 17 лет Александр Буры дебютировал в составе сборной Беларуси в Кубке Дэвиса в матче против Канады. Будучи одним из самых молодых игроков, когда-либо вызванных в команду, этот год стал началом долгой и яркой международной карьеры, представляя свою страну на мировой арене.</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2026 Alexander Bury. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
