@@ -270,7 +270,7 @@ if (whatsappBtn) {
         e.preventDefault(); 
 
         // 2. Ustawiamy numer z Twojego HTML
-        const phoneNumber = "48452895525";
+        const phoneNumber = "48572672787";
         
         // 3. Słownik wiadomości
         const messages = {
@@ -284,7 +284,7 @@ if (whatsappBtn) {
         const messageText = messages[currentLang] || messages['en'];
         
         // 5. Budujemy link (api.whatsapp.com jest pewniejsze dla wiadomości)
-        const finalUrl = `https://api.whatsapp.com/send?phone=${48452895525}&text=${encodeURIComponent(messageText)}`;
+        const finalUrl = `https://api.whatsapp.com/send?phone=${48572672787}&text=${encodeURIComponent(messageText)}`;
 
         // 6. Otwieramy w nowym oknie
         window.open(finalUrl, '_blank');
